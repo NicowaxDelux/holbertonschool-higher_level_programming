@@ -9,7 +9,7 @@ def main():
         if i % 2 != 0:
             ascii_letter -= 32
 
-        print(chr(ascii_letter), end="")
+        print("{}".format(chr(ascii_letter)), end="")
 
 
 if __name__ == "__main__":
