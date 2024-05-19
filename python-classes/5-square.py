@@ -51,13 +51,6 @@ class Square:
 
         """
         return self.__size ** 2
-    
-    #!/usr/bin/python3
-"""Square Class
-
-square class
-
-"""
 
 
 class Square:
@@ -105,9 +98,9 @@ class Square:
 
         """
         return self.__size ** 2
-    
+
     def my_print(self):
-        """Public instance methodthat prints in stdout the 
+        """Public instance methodthat prints in stdout the
         square with the character #
 
         if size is equal to 0, print an empty line
