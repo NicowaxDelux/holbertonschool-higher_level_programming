@@ -37,7 +37,7 @@ class Square:
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
@@ -123,5 +123,5 @@ class Square:
         for _ in range(0, self.__position[1]):
             print()
 
-        for _ in range(self.__size):
+        for _ in range(0, self.__size):
             print("{}{}".format(" " * self.__position[0], "#" * self.__size))
