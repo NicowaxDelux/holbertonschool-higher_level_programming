@@ -14,11 +14,28 @@ class Square:
     """
     @property
     def size(self):
+        """int: length of square sides
+
+        The setter validates that the size is an integer and is 0 or greater
+
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        if type(value) is not int:
+        """size
+         The size setter method update the size value of the square.
+
+        Arg:
+            value(int): value size
+
+        Raise:
+            TypeError: If `size` type is not `int`.
+
+            ValueError: If `size` is less than `0`.
+
+        """
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
@@ -26,12 +43,18 @@ class Square:
 
     @property
     def position(self):
+        """tuple of int: the square's position on a plane
+
+        The setter validates that the position is a tuple of 2 positive ints
+
+        """
+
         return self.__position
 
     @position.setter
     def position(self, value):
         if (isinstance(value, tuple) and len(value) == 2 and
-            isinstance(value[0], int) and isinstance(value[1], int) and
+            isinstance(value[1], int) and isinstance(value[0], int) and
                 value[0] >= 0 and value[1] >= 0):
             self.__position = value
         else:
@@ -43,21 +66,21 @@ class Square:
         initialize size value of square
 
         Args:
-        size (int): size square
-        position (tuple): position square
+            size (int): size square
+            position (tuple): position square
 
         raise:
-        TypeError: size must be an integer
-        ValueError: size must be >= 0
+            TypeError: size must be an integer
+            ValueError: size must be >= 0
 
         """
-        if type(size) is not int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
 
-        if not (isinstance(position, tuple) and 
+        if not (isinstance(position, tuple) and
                 len(position) == 2 and isinstance(position[0], int) and
                 isinstance(position[1], int) and position[0] >= 0 and
                 position[1] >= 0):
@@ -90,4 +113,4 @@ class Square:
             print()
 
         for _ in range(self.__size):
-            print("{}{}".format("_" * self.__position[0], "#" * self.__size))
+            print("{}{}".format(" " * self.__position[0], "#" * self.__size))
