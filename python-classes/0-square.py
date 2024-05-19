@@ -10,6 +10,6 @@ class Square:
     """class emmpty
 
     methods for manipulation
-    
+
     """
     pass
