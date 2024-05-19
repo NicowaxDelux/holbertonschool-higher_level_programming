@@ -12,6 +12,7 @@ class Square:
     methods for manipulation
 
     """
+
     @property
     def size(self):
         """int: length of square sides
@@ -19,6 +20,7 @@ class Square:
         The setter validates that the size is an integer and is 0 or greater
 
         """
+
         return self.__size
 
     @size.setter
@@ -35,6 +37,7 @@ class Square:
             ValueError: If `size` is less than `0`.
 
         """
+
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -64,6 +67,7 @@ class Square:
             TypeError: position must be a tuple of 2 positive integers
 
         """
+
         if (isinstance(value, tuple) and len(value) == 2 and
             isinstance(value[1], int) and isinstance(value[0], int) and
                 value[0] >= 0 and value[1] >= 0):
@@ -85,9 +89,10 @@ class Square:
             ValueError: size must be >= 0
 
         """
+
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        elif size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
 
@@ -106,6 +111,7 @@ class Square:
         the current square area
 
         """
+
         return self.__size ** 2
 
     def my_print(self):
