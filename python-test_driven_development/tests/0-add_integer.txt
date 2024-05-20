@@ -7,6 +7,10 @@
 100
 >>> add_integer(100.3, -2)
 98
+>>> add_integer(1.5, 2.5)
+3
+>>> add_integer(1.9, 2.1)
+3
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
@@ -15,3 +19,23 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+>>> try:
+...     add_integer(1.0, float('inf'))
+... except Exception as e:
+...     print(e)
+OverflowError: cannot convert float infinity to integer
+>>> try:
+...     add_integer(float('inf'), 1.0)
+... except Exception as e:
+...     print(e)
+OverflowError: cannot convert float infinity to integer
+>>> try:
+...     add_integer(1.0, float('nan'))
+... except Exception as e:
+...     print(e)
+ValueError: cannot convert float NaN to integer
+>>> try:
+...     add_integer(float('nan'), 1.0)
+... except Exception as e:
+...     print(e)
+ValueError: cannot convert float NaN to integer
