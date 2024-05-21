@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """This module defines the matrix_divided function.
-
-The matrix_divided function divided matrix and div value integers or floats, converting
+The matrix_divided function divided matrix and div value integers
+or floats, converting
 them to integers.
 """
 
+
 def matrix_divided(matrix, div):
     """ divided matrix with div values round 2 decimal places
-        matrix / div 
+        matrix / div
     """
     new_matrix = []
 
@@ -24,7 +25,7 @@ def matrix_divided(matrix, div):
         for element in row:
             if not isinstance(element, int) and not isinstance(element, float):
                 raise TypeError("matrix must be a matrix\
-                                (list of lists) of integers/floats")
+(list of lists) of integers/floats")
 
             result = round(element / div, 2)
             new_row.append(result)
