@@ -6,7 +6,6 @@ them to integers if necessary.
 """
 
 
-
 def add_integer(a, b=98):
     """add integer
     a(int):number + b(int):number
