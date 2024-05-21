@@ -25,7 +25,7 @@ def matrix_divided(matrix, div):
         for element in row:
             if not isinstance(element, int) and not isinstance(element, float):
                 raise TypeError("matrix must be a matrix\
-(list of lists) of integers/floats")
+ (list of lists) of integers/floats")
 
             result = round(element / div, 2)
             new_row.append(result)
