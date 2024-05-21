@@ -15,13 +15,14 @@ def add_integer(a, b=98):
     if not isinstance(b, float) and not isinstance(b, int):
         raise TypeError("b must be an integer")
 
-    try:
-        if isinstance(a, float):
-            a = int(a)
+    if isinstance(a, float):
+        if a == float('inf') or a == float('-inf'):
+            raise OverflowError("cannot convert float infinity to interger")
+        a = int(a)
 
-        if isinstance(b, float):
-            b = int(b)
-    except OverflowError:
-        raise OverflowError("cannot convert float infinity to integer")
+    if isinstance(b, float):
+        if b == float('inf') or b == float('-inf'):
+            raise OverflowError("cannot convert float infinity to interger")
+        b = int(b)
 
     return a + b
