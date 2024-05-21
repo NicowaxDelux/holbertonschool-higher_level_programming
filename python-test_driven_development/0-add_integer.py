@@ -6,6 +6,7 @@ them to integers if necessary.
 """
 
 
+
 def add_integer(a, b=98):
     """add integer
     a(int):number + b(int):number
@@ -15,10 +16,13 @@ def add_integer(a, b=98):
     if not isinstance(b, float) and not isinstance(b, int):
         raise TypeError("b must be an integer")
 
-    if isinstance(a, float):
-        a = int(a)
+    try:
+        if isinstance(a, float):
+            a = int(a)
 
-    if isinstance(b, float):
-        b = int(b)
+        if isinstance(b, float):
+            b = int(b)
+    except OverflowError:
+        raise OverflowError("cannot convert float infinity to integer")
 
     return a + b
