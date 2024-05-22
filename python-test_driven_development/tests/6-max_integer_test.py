@@ -14,6 +14,10 @@ class TestMaxInteger(unittest.TestCase):
             """tests empty input"""
             self.assertEqual(max_integer(), None)
 
+        def test_one_element(self):
+            """test one element"""
+            self.assertEqual(max_integer([1]), 1)
+
         def test_neg(self):
             """tests negative"""
             self.assertEqual(max_integer([-1, -2, -3]), -1)
