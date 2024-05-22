@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This funtion print 2 arguments strings
-print two strings arguments 
+print two strings arguments
 """
 
 
