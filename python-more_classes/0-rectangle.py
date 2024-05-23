@@ -3,6 +3,7 @@
 
 """
 
+
 class Rectangle:
     """Rectangle class
 
