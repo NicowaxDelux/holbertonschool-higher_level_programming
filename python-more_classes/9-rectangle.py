@@ -24,31 +24,6 @@ class Rectangle:
         self.width = width
         Rectangle.number_of_instances += 1
 
-    @property
-    def height(self):
-        """height getter
-
-        Return:
-            return value height of retangle (int)
-        """
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """height setter
-
-        arg:
-            value(int): value height
-
-        Raises:
-            TypeError: height must be an integer
-            ValueError: height must be >= 0
-        """
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = value
 
     @property
     def width(self):
@@ -75,6 +50,32 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
+    @property
+    def height(self):
+        """height getter
+
+        Return:
+            return value height of retangle (int)
+        """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """height setter
+
+        arg:
+            value(int): value height
+
+        Raises:
+            TypeError: height must be an integer
+            ValueError: height must be >= 0
+        """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
 
     def area(self):
         """ area of rectangle
