@@ -2,8 +2,9 @@
 """class method
 """
 
+
 class BaseGeometry:
-    """ 
+    """
         class BaseGeometry
     """
     pass
