@@ -34,6 +34,8 @@ class Circle(Shape):
 
             return circle perimeter
         """
+        if self.perimeter < 0:
+            return 0
         return 2 * 3.141592653589793 * self.__radius
 
 
