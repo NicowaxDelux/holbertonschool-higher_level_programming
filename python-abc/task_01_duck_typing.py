@@ -27,8 +27,6 @@ class Circle(Shape):
 
             return circle area
         """
-        if self.radius < 0:
-            return 0
         return 3.141592653589793 * self.__radius ** 2
 
     def perimeter(self):
@@ -36,8 +34,6 @@ class Circle(Shape):
 
             return circle perimeter
         """
-        if self.radius < 0:
-            return 0
         return 2 * 3.141592653589793 * self.__radius
 
 
