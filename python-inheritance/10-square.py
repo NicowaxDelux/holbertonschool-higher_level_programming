@@ -53,7 +53,8 @@ class Rectangle(BaseGeometry):
             print [Rectangle] <width>/<height>
         """
         return "[Rectangle] {}/{}".format(self.__width, self.__heigth)
-    
+
+
 class Square(Rectangle):
     """
         Square Class
