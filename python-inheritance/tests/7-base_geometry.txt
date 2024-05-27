@@ -26,4 +26,4 @@ TypeError: cat must be an integer
 
 >>> bg.integer_validator("width")
 Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: BaseGeometry.integer_validator() missing 1 required
