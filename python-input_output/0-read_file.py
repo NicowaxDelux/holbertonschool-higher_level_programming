@@ -2,6 +2,7 @@
 """method read file
 """
 
+
 def read_file(filename=""):
     """ this funtion opens and reads contents of the file
     """
