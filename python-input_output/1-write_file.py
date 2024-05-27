@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" method write file 
+""" method write file
     file: my_first_file.txt
 """
 
