@@ -20,8 +20,8 @@ class Rectangle:
             width(int): value width of rectangle
             height(int): value height of height
         """
-        self.width = width
         self.height = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     @property
