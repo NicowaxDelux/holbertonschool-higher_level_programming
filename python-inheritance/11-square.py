@@ -4,8 +4,7 @@
 
 
 class BaseGeometry:
-    """
-        class BaseGeometry
+    """class BaseGeometry
     """
     def area(self):
         """ method area
@@ -31,8 +30,7 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """
-        class Rectangle
+    """class Rectangle
     """
     def __init__(self, width, height):
         """__init__
