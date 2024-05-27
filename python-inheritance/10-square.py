@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class method
+"""Class method
 """
 
 
@@ -30,7 +30,7 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """class Rectangle
+    """Class Rectangle
     """
     def __init__(self, width, height):
         """__init__
@@ -41,7 +41,7 @@ class Rectangle(BaseGeometry):
         self.__heigth = height
 
     def area(self):
-        """ method area
+        """method area
 
             Return: width * height
         """
