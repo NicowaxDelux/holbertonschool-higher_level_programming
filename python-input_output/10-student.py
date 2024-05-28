@@ -23,8 +23,7 @@ class Student:
 
             Otherwise, all attributes must be retrieved
         """
-        if attr is None:
-            return self.__dict__
-        else:
+        if not attr == None:
             return {attrs: getattr(self, attrs) for attrs in attr
                     if hasattr(self, attrs)}
+        return self.__dict__
