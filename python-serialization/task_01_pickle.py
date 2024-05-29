@@ -35,6 +35,7 @@ class CustomObject:
                 pickle.dump(self, file)
         except (IOError, pickle.PickleError) as e:
             print(f"Error serializing object: {e}")
+            return None
 
     @classmethod
     def deserialize(cls, filename):
