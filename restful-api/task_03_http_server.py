@@ -16,6 +16,12 @@ class SimpleBaseHTTPRequestHandler(BaseHTTPRequestHandler):
                 self.end_headers()
                 response_json = json.dumps(data)
                 self.wfile.write(response_json.encode('utf-8'))
+
+            if self.path == '/status':
+                self.send_response(200)
+                self.send_header("Content-Type", "text/plain")
+                self.end_headers()
+                self.wfile.write(b"OK")
                 
             if self.path == '/info':
                 self.send_response(200)
