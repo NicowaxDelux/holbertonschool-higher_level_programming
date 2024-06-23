@@ -16,9 +16,9 @@ if __name__ == "__main__":
             db=argv[3],
             charset='utf8')
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states` WHERE name LIKE 'N%'\
+    cur.execute("SELECT * FROM `states`\
+                WHERE name LIKE BINARY'N%'\
                 ORDER BY `id` ASC")
     [print(state) for state in cur.fetchall()]
     cur.close()
     db.close()
-
