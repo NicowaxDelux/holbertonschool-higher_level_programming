@@ -16,12 +16,12 @@ if __name__ == "__main__":
             passwd=argv[2],
             db=argv[3],
             charset='utf8')
-    
+
     cur = db.cursor()
 
-    sql = "SELECT * FROM `states`\
-            WHERE BINARY name = %s\
-            ORDER BY `id` ASC"
+    sql = """SELECT * FROM `states`
+            WHERE BINARY name = %s
+            ORDER BY `id` ASC"""
 
     cur.execute(sql, (argv[4],))
     [print(state) for state in cur.fetchall()]
